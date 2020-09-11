@@ -1,0 +1,78 @@
+html {
+    background-color: beige;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Mono';
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    height: 6rem;
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    z-index: 1;
+}
+
+.nav-bar-link {
+    margin: 3rem;
+}
+
+#nav-space {
+    height: 6rem;
+}
+
+.title-display {
+    position: relative;
+    text-align: center;
+    width: 100%;   
+    color: white;
+    background-color: black;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.project-description, .project-image {
+    width: 33.33%;
+    height: 20rem;
+    color: white;
+    background-color: black;
+    text-align: center;
+    object-fit: cover;
+}
+
+.project-description:hover, .project-image:hover {
+    background-color: orange;
+}
+
+
+#focus-project-container {
+    display: flex;
+    height: 30rem;
+}
+
+#focus-project-description-container {
+    width: 41.66%;
+    height: 30rem;
+    object-fit: contain;
+    text-align: center;
+    background-color: red;
+}
+
+#focus-project-image {
+    width: 58.33%;
+    height: 30rem;
+    object-fit: contain;
+    text-align: center;
+    background-color: orange;
+}

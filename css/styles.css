@@ -1,0 +1,163 @@
+html {
+    background-color: beige;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Mono';
+} 
+
+nav {
+    position: fixed;
+    top: 0px;
+    height: 7.3rem;
+    width: 100%;
+    background-color: grey;
+    z-index: 2;
+}
+
+#logo {
+    float: left;
+}
+
+#nav-bar-links-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 66.66%;
+    height: 7.3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar-link {
+    background-color: red;
+    text-align: center;
+    width: 11rem;
+    height: 5rem;
+}
+
+/*
+#experience-link:hover, #creative-projects-link:hover, #about-me-link:hover, #contact-link:hover + #main-image {
+    opacity: 100%
+}
+*/
+
+#nav-space {
+    height: 7.3rem;
+}
+
+.main-title-display {
+    position: relative;
+    height: 37rem;
+    text-align: center;
+    width: 100%;   
+    color: white;
+    background-color: black;
+}
+
+#main-title {
+    position: absolute;
+    top: 3.67rem;
+    left: 8%;
+    font-size: 6.75rem;
+    border: .25rem solid white;
+    padding: 1rem;
+}
+
+#subtitle {
+    position: absolute;
+    top: 22rem;
+    left: 58.33%;
+    font-size: 2rem;
+    border: .2rem solid white;
+    padding: .5rem;
+}
+
+.white-squares {
+    position: absolute;
+    z-index: 1;
+}
+
+#left-squares {
+    top: 25.7rem;
+    left: 25%;
+    width: 20rem;
+}
+
+#right-squares {
+    top: 11rem;
+    left: 58.33%;
+    width: 7rem;
+}
+
+.white-squares:hover + #main-image {
+    opacity: 100%;
+}
+
+#main-image {
+    opacity: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42rem;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#about-me-container {
+    display: flex;
+    width: 100%;
+    height: 30rem;
+    justify-content: space-around;
+}
+
+.description-image {
+    width: 58.33%;
+    object-fit: contain;
+}
+
+.description-container {
+    width: 41.67%;
+    text-align: center;
+    background-color: red;
+}
+
+/*
+.image-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.image-link {
+    width: 33.33%;
+    height: 15rem;
+    object-fit: cover;
+}
+*/
+
+#footer-images-container {
+    display: flex;
+    width: 100%;
+    height: 11rem;
+    background-color: blue;
+    padding-top: 2rem;
+
+}
+
+.footer-image {
+    width: 25%;
+    object-fit: cover;
+}
+
+footer {
+    width: 100%;
+    height: 20rem;
+    background-color: grey;
+}
