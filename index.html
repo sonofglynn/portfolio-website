@@ -3,17 +3,19 @@
 <head>
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
+    <script src="js/scripts.js"></script>
     <title>Matthew Spencer</title>
 </head>
 <body>
     <aside role="complementary">
         <nav role="navigation">
-            <a href="index.html" id="logo" class="nav-bar-link">Super Cool Logo</a>
+            <a href="index.html">
+                <img src="images/my-signature.png" id="logo" class="nav-bar-link">
+            </a>
             <div id="nav-bar-links-container">
                 <a href="#" id="experience-link" class="nav-bar-link">Experience</a>
                 <a href="html/creative-projects.html" id="creative-projects-link" class="nav-bar-link">Creative Projects</a>
-                <a href="#" id="about-me-link" class="nav-bar-link">About Me</a>
-                <a href="#" id="contact-link" class="nav-bar-link">Contact</a>
+                <a href="#about-me-container" id="about-me-link" class="nav-bar-link">About Me</a>
             </div>
         </nav>
     </aside>
@@ -22,42 +24,29 @@
     <div id="nav-space"></div>
     
     <header class="main-title-display" role="banner">
-        <img src="images/white-squares-left.png" class="white-squares" id="left-squares">
-        <img src="images/white-squares-right.png" class="white-squares" id="right-squares">
-        <img src="images/matthew-and-clement.jpg" id="main-image">
+        <img onmouseover="showBackgroundImage(this)" onmouseout="hideBackgroundImage()" src="images/white-squares-right.png" class="white-squares" id="right-squares">
+        <img onmouseover="showBackgroundImage(this)" onmouseout="hideBackgroundImage()" src="images/white-squares-left.png" class="white-squares" id="left-squares">
+        <img src="" id="main-image">
         <h1 id="main-title">Matthew<br>Spencer</h1>
         <h2 id="subtitle">An aspiring programmer<br>and creator</h2>
     </header>
 
     <section id="about-me-container">
-        <img class="description-image" src="images/matthew-and-clement.jpg" alt="Picture of me">
+        <img class="description-image" src="images/matthew-headshot.jpg" alt="Picture of me">
         <div class="description-container">
-            <p>I am a cool dude.</p>
+            <h2 class="description-header">About Me</h2>
+            <p class="description">Hi, Matthew here. I'm currently a student at Georgia Institute of Technology, pursuing my batchleors degree in Computational Media. More info to come with draft #2!</p>
         </div>
     </section>
 
-    <!--
-    <section class="image-links-container">
-        --
-            Images. Each image links to the general page it is a subpage of.
-            Images include Jonn's Glob Game, Jonn's Birthday Cake, Forged Illustrations, Animations, 
-            Misc. Illustrations/Art, Photography, Music
-        --
-        <img class="image-link" src="images/Z-and-P-Battle.png" alt="Jonn the Glob">
-        <img class="image-link" src="images/Shoes-Forged.png" alt="Forged Illustrations (featured)">
-        <img class="image-link" src="images/Pullup-bro.png" alt="Illustrations and Animations">
-        <img class="image-link" src="images/Clement-Sombrero.jpg" alt="Photography">
-        <img class="image-link" src="images/Z-and-P-Battle.png" alt="Music">
-    </section>
-    -->
     <footer>
         <div id="footer-images-container">
-            <img class="footer-image" src="images/Shoes-Forged.png">
-            <img class="footer-image" src="images/Pullup-bro.png">
-            <img class="footer-image" src="images/Clement-Sombrero.jpg">
-            <img class="footer-image" src="images/Z-and-P-Battle.png">
+            <img class="footer-image" src="images/illustrations-and-animations/pullup-bro.png">
+            <img class="footer-image" src="images/illustrations-and-animations/santa-clause-2018.jpg">
+            <img class="footer-image" src="images/illustrations-and-animations/warming-up.jpg">
+            <img class="footer-image" src="images/jonn-the-blob.png">
         </div>
-        <a>matthewgspencer7409@gmail.com</a>
+        <a id="footer-email-link">matthewgspencer7409@gmail.com</a>
     </footer>
 </body>
 </html>

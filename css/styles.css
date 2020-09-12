@@ -1,11 +1,12 @@
-html {
-    background-color: beige;
+:root {
+    --main-color: white;
+    --secondary-color: black;
 }
 
 * {
     padding: 0;
     margin: 0;
-    font-family: 'DM Mono';
+    font-family: 'DM Mono', "Courier New", Courier, monospace;
 } 
 
 nav {
@@ -13,12 +14,16 @@ nav {
     top: 0px;
     height: 7.3rem;
     width: 100%;
-    background-color: grey;
+    background-color: var(--main-color);
     z-index: 2;
 }
 
 #logo {
     float: left;
+    width: auto;
+    height: 7.3rem;
+    background-color: var(--secondary-color);
+    padding: 0;
 }
 
 #nav-bar-links-container {
@@ -33,18 +38,23 @@ nav {
 }
 
 .nav-bar-link {
-    background-color: red;
+    background-color: var(--secondary-color);
     text-align: center;
+    font-size: 1rem;
     width: 11rem;
-    height: 5rem;
+    padding: 2.3rem 0;
+    color: var(--main-color);
 }
 
-/*
-#experience-link:hover, #creative-projects-link:hover, #about-me-link:hover, #contact-link:hover + #main-image {
-    opacity: 100%
+a:link, a:visited {
+    color: var(--main-color);
+    text-decoration: none;
 }
-*/
 
+a:hover, a:active {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
 #nav-space {
     height: 7.3rem;
 }
@@ -54,8 +64,8 @@ nav {
     height: 37rem;
     text-align: center;
     width: 100%;   
-    color: white;
-    background-color: black;
+    color: var(--main-color);
+    background-color: var(--secondary-color);
 }
 
 #main-title {
@@ -63,7 +73,7 @@ nav {
     top: 3.67rem;
     left: 8%;
     font-size: 6.75rem;
-    border: .25rem solid white;
+    border: .25rem solid var(--main-color);
     padding: 1rem;
 }
 
@@ -72,7 +82,7 @@ nav {
     top: 22rem;
     left: 58.33%;
     font-size: 2rem;
-    border: .2rem solid white;
+    border: .2rem solid var(--main-color);
     padding: .5rem;
 }
 
@@ -87,14 +97,36 @@ nav {
     width: 20rem;
 }
 
+#left-squares:hover ~ #main-title {
+    color: black;
+    background-color: white;
+}
+
+#left-squares:hover ~ #subtitle {
+    color: black;
+    background-color: white;
+}
+
 #right-squares {
     top: 11rem;
     left: 58.33%;
     width: 7rem;
 }
 
-.white-squares:hover + #main-image {
-    opacity: 100%;
+#right-squares:hover {
+    background-color: black;
+}
+
+#right-squares:hover ~ #main-title {
+    color: black;
+    background-color: white;
+}
+#right-squares:hover ~ #subtitle {
+    color: black;
+    background-color: white;
+}
+#right-squares:hover ~ #left-squares {
+    background-color: black;
 }
 
 #main-image {
@@ -118,35 +150,28 @@ nav {
 .description-image {
     width: 58.33%;
     object-fit: contain;
+    background-color: var(--secondary-color);
 }
 
 .description-container {
     width: 41.67%;
     text-align: center;
-    background-color: red;
 }
 
-/*
-.image-links-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
+.description-header {
+    font-size: 3rem;
+    padding: 2rem;
 }
 
-.image-link {
-    width: 33.33%;
-    height: 15rem;
-    object-fit: cover;
+.description {
+    font-size: 1.5rem;
 }
-*/
 
 #footer-images-container {
     display: flex;
     width: 100%;
     height: 11rem;
-    background-color: blue;
+    background-color: var(--secondary-color);
     padding-top: 2rem;
 
 }
@@ -158,6 +183,8 @@ nav {
 
 footer {
     width: 100%;
-    height: 20rem;
-    background-color: grey;
+    height: 18rem;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    text-align: center;
 }
