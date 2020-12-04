@@ -1,12 +1,14 @@
 let focusProjectExists = false;
-let projectHeadings = 
-    ["Forged", "Illustration and Animation", "Video Game Design", "Music", "Photography"];
-let projectDescriptions = 
-    ["Currently, I am creating commissioned illustrations for Forged, a book being written by Edna King. Publication info to follow! (click image to scroll)",
+let projectHeadings = [
+    "Forged", "Illustration and Animation", "Video Game Design", "Music", "Photography"
+];
+let projectDescriptions = [
+    "Currently, I am creating commissioned illustrations for Forged, a book being written by Edna King. Publication info to follow! (click image to scroll)",
     "For as long as I can remember, illustration and animation have been my favorite creative effort. I have worked in various programs and mediums including ClipStudio Paint, Autodesk Sketchbook, pencil, acrylic, and charcoal. (click image to scroll)",
-    "Video game design is an expanding part of my portfolio, and one for which I have an intent interest. I have created code, sprites, and music for games both realized and unfinished. The convergence of art, animation, music, and story that is video game design excites my creative interest, and I look forward to developing more in this medium. (click image to scroll)",
+    "Video game design is an expanding part of my portfolio, and one for which I have an intent interest. I have created code, sprites, and music for use in games. The convergence of art, animation, music, and story that is video game design excites my creative interest, and I look forward to developing more in this medium. (click image to scroll)",
     "Logic is my choice platform for producing music. My musical proficiencies include guitar (acoustic and electric), voice, and piano. (click image to scroll)",
-    "Though by no means a professional, I take every change I can get to snap a photo when the time is right. Scroll throught to see my pics! (click image to scroll)"];
+    "Though by no means a professional, I take every chance I can get to snap a photo when the time is right. Scroll through to see my pics! (click image to scroll)"
+];
 let imagesArrayIndex = 0;
 let imagesArray;
 let forgedImages = [
@@ -41,27 +43,27 @@ function toFocusProject(projectThumbnail) {
     imagesArrayIndex = 0;
     switch (projectThumbnail.alt) {
         case "Forged Illustrations link":
-            heading = projectHeadings[0]
+            heading = projectHeadings[0];
             description = projectDescriptions[0];
             imagesArray = forgedImages;
             break;
         case "Illustrations and Animations link":
-            heading = projectHeadings[1]
+            heading = projectHeadings[1];
             description = projectDescriptions[1];
             imagesArray = illAndAniImages;
             break;
         case "Jonn's Blob Game link":
-            heading = projectHeadings[2]
+            heading = projectHeadings[2];
             description = projectDescriptions[2];
             imagesArray = vgDevImages;
             break;
         case "Music link":
-            heading = projectHeadings[3]
+            heading = projectHeadings[3];
             description = projectDescriptions[3];
             imagesArray = musicImages;
             break;
         case "Photography link":
-            heading = projectHeadings[4]
+            heading = projectHeadings[4];
             description = projectDescriptions[4];
             imagesArray = photographyImages;
             break;

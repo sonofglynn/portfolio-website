@@ -55,6 +55,7 @@ a:hover, a:active {
     background-color: var(--main-color);
     color: var(--secondary-color);
 }
+
 #nav-space {
     height: 7.3rem;
 }

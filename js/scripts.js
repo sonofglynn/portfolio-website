@@ -1,7 +1,4 @@
-
-
 function showBackgroundImage(squares) {
-    console.log(squares.id);
     switch (squares.id) {
         case "left-squares":
             document.getElementById("main-image").src = "images/bee-crape-myrtle.jpg";
@@ -10,6 +7,7 @@ function showBackgroundImage(squares) {
         case "right-squares":
             document.getElementById("main-image").src = "images/Shoes-Forged.png";
             fadeInElement(document.getElementById("main-image"));
+            break;
     }
 
 }

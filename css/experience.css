@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Mono', "Courier New", Courier, monospace;
+} 
+
+nav {
+    position: fixed;
+    top: 0px;
+    height: 7.3rem;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+}
+
+#logo {
+    float: left;
+    width: auto;
+    height: 7.3rem;
+    background-color: black;
+    padding: 0;
+}
+
+#nav-bar-links-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 66.66%;
+    height: 7.3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar-link {
+    background-color: black;
+    text-align: center;
+    font-size: 1rem;
+    width: 11rem;
+    padding: 2.3rem 0;
+    color: white;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    background-color: white;
+    color: black;
+}
+
+#nav-space {
+    height: 7.3rem;
+}
+
+/*
+END HEADER CODE
+*/
+
+#title-display {
+    position: relative;
+    text-align: center;
+    width: 100%;   
+    color: white;
+    background-color: black;
+    display: flex;
+    height: 30rem;
+}
+
+#main-title {
+    position: absolute;
+    top: 3.67rem;
+    left: 8%;
+    font-size: 4rem;
+    border: .25rem solid white;
+    padding: 1rem;
+}
+
+/*
+#subtitle {
+    position: absolute;
+    top: 22rem;
+    left: 58.33%;
+    font-size: 1.5rem;
+    border: .2rem solid white;
+    padding: .5rem;
+}
+*/
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-image {
+    width: 50%;
+    height: 20rem;
+    color: white;
+    background-color: black;
+    text-align: center;
+    object-fit: cover;
+}
+.section-description-container {
+    text-align: center;
+    width: 50%;
+    height: 25rem;
+    background-color: white;
+}
+.section-header {
+    font-size: 2.5rem;
+    padding: .5rem;
+}
+.section-description {
+    font-size: 1.5rem;
+    padding: .2rem 1rem;
+}
+
+
+/* 
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.project-description, .project-image {
+    width: 33.33%;
+    height: 20rem;
+    color: white;
+    background-color: black;
+    text-align: center;
+    object-fit: cover;
+}
+
+#focus-project-description-container {
+    width: 41.66%;
+    height: 30rem;
+    object-fit: contain;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+#focus-project-heading {
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+#focus-project-description {
+    font-size: 1.5rem;
+    padding: .2rem;
+}
+
+#focus-project-image {
+    width: 58.33%;
+    height: 30rem;
+    object-fit: contain;
+    text-align: center;
+    background-color: white;
+} */
+
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
