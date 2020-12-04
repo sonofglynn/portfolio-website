@@ -1,13 +1,16 @@
 let focusProjectExists = false;
+
+let imageIndex = 0;
+
 let projectHeadings = [
     "Forged", "Illustration and Animation", "Video Game Design", "Music", "Photography"
 ];
 let projectDescriptions = [
-    "Currently, I am creating commissioned illustrations for Forged, a book being written by Edna King. Publication info to follow! (click image to scroll)",
-    "For as long as I can remember, illustration and animation have been my favorite creative effort. I have worked in various programs and mediums including ClipStudio Paint, Autodesk Sketchbook, pencil, acrylic, and charcoal. (click image to scroll)",
-    "Video game design is an expanding part of my portfolio, and one for which I have an intent interest. I have created code, sprites, and music for use in games. The convergence of art, animation, music, and story that is video game design excites my creative interest, and I look forward to developing more in this medium. (click image to scroll)",
+    "Currently, I am creating commissioned illustrations for Forged, a book being written by Edna King. The \"armor of God\" is a prominent theme in the book, hence the depictions of weaponry. I am using Clip Studio Paint for this project. (click image to scroll)",
+    "For as long as I can remember, illustration and animation have been my favorite creative effort. I have worked in various programs and mediums including ClipStudio Paint, Autodesk Sketchbook, pencil, acrylic, and charcoal. Below, you can find the illustrations I did for Forged, a book to be published soon. (click image to scroll)",
+    "Video game design is an expanding part of my portfolio - both computationally and artistically. For LMC 2700 (Intro to Computational Media) in Fall 2020, I contributed to the concept creation, JS programming, level design, and music production for a game called DropBox. I have created code, sprites, and music for use in personal games. I look forward to developing more in this medium. (click image to scroll)",
     "Logic is my choice platform for producing music. My musical proficiencies include guitar (acoustic and electric), voice, and piano. (click image to scroll)",
-    "Though by no means a professional, I take every chance I can get to snap a photo when the time is right. Scroll through to see my pics! (click image to scroll)"
+    "Though by no means a professional, I take every chance I can get to snap a photo when the time is right. I have also dabbled with filmmaking, which you can check out on my YouTube channel (Try searching \"DOMSE Teen SOYO PLC 2018\"). Scroll through to see my pics! (click image to scroll)"
 ];
 let imagesArrayIndex = 0;
 let imagesArray;
@@ -92,6 +95,9 @@ function toFocusProject(projectThumbnail) {
         document.getElementById("focus-project-heading").innerHTML = heading;
         document.getElementById("focus-project-description").innerHTML = description;
     }
+    //finds capacity
+    let capacity = 0;
+
     //adds scroll feature
     document.getElementById("focus-project-image").onclick = scrollImages;
     document.body.scrollTop = 0;
@@ -100,13 +106,14 @@ function toFocusProject(projectThumbnail) {
 }
 
 function scrollImages() {
-    imagesArrayIndex++;
-    if(imagesArray[imagesArrayIndex] != undefined) {
-        document.getElementById("focus-project-image").src = imagesArray[imagesArrayIndex];
-    } else {
-        imagesArrayIndex = 0;
-        document.getElementById("focus-project-image").src = imagesArray[imagesArrayIndex];
+    let heading = document.getElementById("focus-project-heading").innerHTML;
+    document.getElementById("focus-project-image").src = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
+    imageIndex++;
+    let nextImage = new Image();
+    nextImage.onerror = function() {
+        imageIndex = 0;
     }
+    nextImage.src = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
 }
 
 function addElement(parentId, elementTag, elementId, html) {
@@ -132,4 +139,12 @@ function fadeInElement(element) {
             clearInterval(intervalId);
         }
     }
+}
+
+function imageIndexIsValid(dirName, index) {
+    let imagePath = "../images/" + dirName + "/" + dirName + index;
+
+}
+function imageIsPdf() {
+
 }
