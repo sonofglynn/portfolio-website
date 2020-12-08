@@ -107,8 +107,11 @@ function toFocusProject(projectThumbnail) {
 
 function scrollImages() {
     let heading = document.getElementById("focus-project-heading").innerHTML.toLowerCase();
+    let firstWord;
     if (heading.includes(" ")) {
-        heading = heading.substr(0, heading.indexOf(" "));
+        firstWord = heading.substr(0, heading.indexOf(" "));
+    } else {
+        firstWord = heading;
     }
     document.getElementById("focus-project-image").src = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
     
