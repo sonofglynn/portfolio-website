@@ -107,16 +107,17 @@ function toFocusProject(projectThumbnail) {
 
 function scrollImages() {
     let heading = document.getElementById("focus-project-heading").innerHTML.toLowerCase();
-    let pathWithSpaces = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
-    document.getElementById("focus-project-image").src = pathWithSpaces.replace(" ", "%20").replace(" ", "%20");
+    if (heading.includes(" ")) {
+        heading = heading.substr(0, heading.indexOf(" "));
+    }
+    document.getElementById("focus-project-image").src = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
     
     imageIndex++;
     let nextImage = new Image();
     nextImage.onerror = function() {
         imageIndex = 0;
     }
-    let nextPathWithSpaces = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
-    nextImage.src = nextPathWithSpaces.replace(" ", "%20").replace(" ", "%20");;
+    nextImage.src = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
 }
 
 function addElement(parentId, elementTag, elementId, html) {
