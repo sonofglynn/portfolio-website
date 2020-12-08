@@ -95,9 +95,6 @@ function toFocusProject(projectThumbnail) {
         document.getElementById("focus-project-heading").innerHTML = heading;
         document.getElementById("focus-project-description").innerHTML = description;
     }
-    //finds capacity
-    let capacity = 0;
-
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     //adds scroll feature
@@ -110,13 +107,16 @@ function toFocusProject(projectThumbnail) {
 
 function scrollImages() {
     let heading = document.getElementById("focus-project-heading").innerHTML.toLowerCase();
-    document.getElementById("focus-project-image").src = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
+    let pathWithSpaces = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
+    document.getElementById("focus-project-image").src = pathWithSpaces.replace(" ", "%20").replace(" ", "%20");
+    
     imageIndex++;
     let nextImage = new Image();
     nextImage.onerror = function() {
         imageIndex = 0;
     }
-    nextImage.src = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
+    let nextPathWithSpaces = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
+    nextImage.src = nextPathWithSpaces.replace(" ", "%20").replace(" ", "%20");;
 }
 
 function addElement(parentId, elementTag, elementId, html) {
@@ -142,12 +142,4 @@ function fadeInElement(element) {
             clearInterval(intervalId);
         }
     }
-}
-
-function imageIndexIsValid(dirName, index) {
-    let imagePath = "../images/" + dirName + "/" + dirName + index;
-
-}
-function imageIsPdf() {
-
 }
