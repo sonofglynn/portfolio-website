@@ -113,14 +113,13 @@ function scrollImages() {
     } else {
         firstWord = heading;
     }
-    document.getElementById("focus-project-image").src = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
-    
+    document.getElementById("focus-project-image").src = "../images/" + firstWord + "/" + firstWord + (imageIndex + 1) + ".png";
     imageIndex++;
     let nextImage = new Image();
     nextImage.onerror = function() {
         imageIndex = 0;
     }
-    nextImage.src = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
+    nextImage.src = "../images/" + firstWord + "/" + firstWord + (imageIndex + 1) + ".png";
 }
 
 function addElement(parentId, elementTag, elementId, html) {
