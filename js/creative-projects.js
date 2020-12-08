@@ -98,15 +98,18 @@ function toFocusProject(projectThumbnail) {
     //finds capacity
     let capacity = 0;
 
-    //adds scroll feature
-    document.getElementById("focus-project-image").onclick = scrollImages;
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-
+    //adds scroll feature
+    if (!(heading == "Music")) {
+        document.getElementById("focus-project-image").onclick = scrollImages;
+    } else {
+        document.getElementById("focus-project-image").onclick = null;
+    }
 }
 
 function scrollImages() {
-    let heading = document.getElementById("focus-project-heading").innerHTML;
+    let heading = document.getElementById("focus-project-heading").innerHTML.toLowerCase();
     document.getElementById("focus-project-image").src = "../images/" + heading + "/" + heading + (imageIndex + 1) + ".png";
     imageIndex++;
     let nextImage = new Image();

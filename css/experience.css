@@ -55,18 +55,14 @@ a:hover, a:active {
     height: 7.3rem;
 }
 
-/*
-END NAV CODE
-*/
-
+/* content */
 #title-display {
     position: relative;
     text-align: center;
-    width: 100%;   
+    width: 100%;
     color: white;
     background-color: black;
-    display: flex;
-    height: 30rem;
+    height: 37rem;
 }
 
 #main-title {
@@ -77,17 +73,6 @@ END NAV CODE
     border: .25rem solid white;
     padding: 1rem;
 }
-
-/*
-#subtitle {
-    position: absolute;
-    top: 22rem;
-    left: 58.33%;
-    font-size: 1.5rem;
-    border: .2rem solid white;
-    padding: .5rem;
-}
-*/
 
 section {
     display: flex;
@@ -102,11 +87,11 @@ section {
 }
 .section-image {
     width: 50%;
-    height: 20rem;
+    height: 25rem;
     color: white;
     background-color: black;
     text-align: center;
-    object-fit: cover;
+    object-fit: contain;
 }
 .section-description-container {
     text-align: center;
@@ -123,56 +108,46 @@ section {
     padding: .2rem 1rem;
 }
 
-
-/* 
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
+/* footer */
+#border-space {
+    height: 2rem;
+    overflow: hidden;
 }
 
-.project-description, .project-image {
-    width: 33.33%;
-    height: 20rem;
-    color: white;
-    background-color: black;
-    text-align: center;
-    object-fit: cover;
-}
-
-#focus-project-description-container {
-    width: 41.66%;
-    height: 30rem;
+.border-stripes-image {
     object-fit: contain;
-    text-align: center;
-    background-color: black;
-    color: white;
 }
-
-#focus-project-heading {
-    font-size: 2.5rem;
-    padding: 1rem;
-}
-
-#focus-project-description {
-    font-size: 1.5rem;
-    padding: .2rem;
-}
-
-#focus-project-image {
-    width: 58.33%;
-    height: 30rem;
-    object-fit: contain;
-    text-align: center;
-    background-color: white;
-} */
 
 footer {
-    width: 100%;
     height: 7rem;
     background-color: black;
     color: white;
     text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 980px) {
+    #main-title {
+        position: relative;
+        left: unset;
+    }
+
+    .odd-section :nth-child(1) {
+        order: 2;
+    }
+    
+    .section-image {
+        width: 100%;
+        height: 25rem;
+        color: white;
+        background-color: black;
+        text-align: center;
+        object-fit: contain;
+    }
+    .section-description-container {
+        text-align: center;
+        width: 100%;
+        height: 25rem;
+        background-color: white;
+    }
 }
