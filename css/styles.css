@@ -176,6 +176,12 @@ footer {
     padding: 1rem;
 }
 
+#last-updated {
+    color: rgb(36, 224, 241);
+    font-size: 2rem;
+    z-index: 10;
+}
+
 @media (max-width: 980px) {
     /* content styles */
     .main-title-display {
