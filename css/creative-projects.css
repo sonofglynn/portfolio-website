@@ -98,6 +98,11 @@ a:hover, a:active {
     justify-content: left;
     align-items: flex-start;
     align-content: flex-start;
+    
+}
+
+.projects-container:hover {
+    cursor: pointer;
 }
 
 .project-description, .project-image {
@@ -148,6 +153,10 @@ a:hover, a:active {
     object-fit: contain;
     text-align: center;
     background-color: white;
+}
+
+#focus-project-image:hover {
+    cursor: pointer;
 }
 
 /* footer */
